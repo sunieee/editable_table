@@ -1,0 +1,42 @@
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* 按钮样式 */
+.button {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}

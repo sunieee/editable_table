@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Table</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <table id="editable-table">
+        <thead>
+            <tr>
+                <th>镜像来源</th>
+                <th>更新频率</th>
+                <th>使用人</th>
+                <th>部门</th>
+                <th>同步后地址</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be added here -->
+        </tbody>
+    </table>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
