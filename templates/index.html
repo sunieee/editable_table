@@ -26,6 +26,31 @@
             <!-- Table rows will be added here -->
         </tbody>
     </table>
+
+    <!-- Add the notice section at the end -->
+    <div class="notice-section">
+        <h3>Notice:</h3>
+        <ol>
+            <li>在最底下一行可添加新的Docker镜像，可以修改前4个字段，多个镜像可由逗号分隔。点击添加之后会自动添加Dokcer拉取任务</li>
+            <li>除了最后一行都是不可编辑的，每行有三种操作：编辑、删除、重运行
+                <ol type="a">
+                    <li>编辑：点击之后，按钮变为提交，每行前四个值可编辑，如果编辑了“镜像来源”（不能是多值），则会添加新的Docker拉取任务</li>
+                    <li>删除：点击之后将确认删除改行</li>
+                    <li>重运行：点击之后重新提交该Docker拉取任务</li>
+                </ol>
+            </li>
+            <li>状态分为：identical/waiting/pulling/uploading/error/done六种。悬浮在状态上，可显示详细信息（创建时间，更新时间）
+                <ol type="a">
+                    <li>identical：任务一开始根据dockerhub和sensetime的镜像ID进行对比，相同则直接填identical</li>
+                    <li>waiting: 正在执行的任务（指处于pulling或者uploading的状态）队列数量设置为3，之后到达的任务会处于waiting</li>
+                    <li>pulling/uploading: 正在pull/upload Docker镜像的任务</li>
+                    <li>error: 中途任何原因失败将显示error，悬浮显示详细错误</li>
+                </ol>
+            </li>
+            <li>对于周期性执行的任务，后台进程每天0点检查数据库。每天/每周周一凌晨0点会自动加入任务队列</li>
+        </ol>
+    </div>
+
     <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>

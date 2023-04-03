@@ -1,42 +1,76 @@
-/* 表格样式 */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    color: #333;
+/* Button Styles */
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    padding: 6px 16px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
-th,
-td {
-    padding: 12px 15px;
-    border: 1px solid #ccc;
+button:hover {
+    background-color: #45a049;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    /* Extensive width */
+    min-width: 600px;
+    /* Minimum width */
+    max-width: 1200px;
+    /* Maximum width */
+    table-layout: fixed;
+    /* Fixed layout to prevent content from changing the width */
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+table th,
+table td {
+    padding: 6px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    text-align: center;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+table tr:last-child {
+    border-bottom: none;
+}
+
+.notice-section {
+    background-color: #f9edbe;
+    border: 1px solid #f0c36d;
+    border-radius: 4px;
+    color: #333;
+    font-size: 16px;
+    margin: 20px 0;
+    padding: 15px;
     text-align: left;
 }
 
-th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-}
-
-tr:nth-child(even) {
-    background-color: #f8f8f8;
-}
-
-/* 按钮样式 */
-.button {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
+/* Selection style */
+::selection {
+    background-color: #b3d4fc;
+    color: #333;
 }
