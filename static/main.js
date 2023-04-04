@@ -91,6 +91,7 @@ function renderTable(data) {
         let td = $("<td contenteditable='false'></td>").text(row.status);
         set_status_td(td, row);
         tr.append(td);
+        add_contend(row.size);
 
         // 添加“编辑/提交”按钮
         let operation = $("<td></td>");
@@ -118,7 +119,7 @@ function renderTable(data) {
 
     // 添加一个空行作为最后一行
     const tr = $("<tr></tr>").attr("data-id", max_id + 1);
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 7; i++) {
         if (i===1) {
             tr.append(get_selection_td())
         } else{
@@ -195,14 +196,12 @@ function toggleEditMode(row, button) {
 
 function createRow(row) {
     // 你需要在后端实现一个新的路由以处理这个请求
-    const rowId = row.attr("data-id");
     const rowData = getRowData(row);
 
     $.ajax({
         url: '/create-row',
         method: 'POST',
         data: {
-            row_id: rowId,
             content: rowData
         },
         success: function (response) {

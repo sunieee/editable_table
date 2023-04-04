@@ -9,7 +9,7 @@ button {
     font-size: 16px;
     transition-duration: 0.4s;
     cursor: pointer;
-    padding: 6px 16px;
+    padding: 6px 14px;
     border-radius: 4px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
@@ -22,12 +22,13 @@ button:hover {
 /* Table Styles */
 table {
     width: 100%;
+    margin:auto;
     /* Extensive width */
-    min-width: 600px;
+    min-width: 1200px;
     /* Minimum width */
-    max-width: 1200px;
+    max-width: 1800px;
     /* Maximum width */
-    table-layout: fixed;
+    /* table-layout: fixed; */
     /* Fixed layout to prevent content from changing the width */
     border-collapse: collapse;
     font-family: Arial, sans-serif;
