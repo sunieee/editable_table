@@ -15,6 +15,9 @@
 `docker login registry.sensetime.com/xlab -u sunye2`
 
 
+内网访问地址：http://10.142.49.243:9110
+公网访问地址：http://actvis.cn:9110/
+
 实现效果：
 
 ![image](https://user-images.githubusercontent.com/42105752/229693572-1bb498a1-eb9f-4e3b-8adf-faa566698d57.png)
