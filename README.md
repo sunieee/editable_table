@@ -13,3 +13,8 @@
 
 注意，启动程序之前，需要：
 `docker login registry.sensetime.com/xlab -u sunye2`
+
+
+实现效果：
+
+![image](https://user-images.githubusercontent.com/42105752/229693572-1bb498a1-eb9f-4e3b-8adf-faa566698d57.png)
