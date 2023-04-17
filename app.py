@@ -246,4 +246,4 @@ def delete_row():
 if __name__ == '__main__':
     print('starting app with daily task')
     schedule_daily_task()
-    socketio.run(app, '0.0.0.0', 8080, debug=True, use_reloader=False)
+    socketio.run(app, '0.0.0.0', 9110, debug=True, use_reloader=False)

@@ -54,6 +54,7 @@ function change_status(row) {
     set_status_td(td, row);
 
     tr.find('td:eq(4)').text(row.target);
+    tr.find('td:eq(6)').text(row.size);
 }
 
 function get_selection_td(value='single time', disabled=false) {
