@@ -58,7 +58,7 @@ db_session = sessionmaker(bind=engine)()
 socketio = SocketIO(app, cors_allowed_origins="*")
 
 class Worker:
-    worker_count = 3
+    worker_count = 1
 
     def __init__(self):
         self.thread = eventlet.spawn(self.run)
@@ -87,14 +87,6 @@ class Worker:
         print('sensetime image', sensetime_image)
         
         ret, size = check_identical(image, sensetime_image)
-        if ret == 'NotFound':
-            row.status = 'error'
-            row.target = 'source image not found!'
-            row.update_time = datetime.now()
-            socketio.emit('status_change', row.to_dict(), namespace='/table')
-            db_session.commit()
-            return
-        
         row.size = size
         if ret == 'NotIdentical':
             row.status = 'pulling'
@@ -108,6 +100,14 @@ class Worker:
             upload_image(image, sensetime_image, save=False)
 
             row.status = 'done'
+        elif ret != 'Identical':
+            row.status = 'error'
+            row.target = ret
+            row.update_time = datetime.now()
+            socketio.emit('status_change', row.to_dict(), namespace='/table')
+            db_session.commit()
+            return
+
         else:
             row.status = 'identical'
         

@@ -1,0 +1,6 @@
+2023-05-08 21:13:47,168 INFO sqlalchemy.engine.base.Engine SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+2023-05-08 21:13:47,169 INFO sqlalchemy.engine.base.Engine ()
+2023-05-08 21:13:47,169 INFO sqlalchemy.engine.base.Engine SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+2023-05-08 21:13:47,169 INFO sqlalchemy.engine.base.Engine ()
+2023-05-08 21:13:47,170 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("table")
+2023-05-08 21:13:47,170 INFO sqlalchemy.engine.base.Engine ()
