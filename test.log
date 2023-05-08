@@ -4,3 +4,14 @@
 2023-05-08 21:13:47,169 INFO sqlalchemy.engine.base.Engine ()
 2023-05-08 21:13:47,170 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("table")
 2023-05-08 21:13:47,170 INFO sqlalchemy.engine.base.Engine ()
+spawn sussess!
+starting app with daily task
+socketio connected!
+2023-05-08 21:16:21,921 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+2023-05-08 21:16:21,923 INFO sqlalchemy.engine.base.Engine SELECT "table".id AS table_id, "table".source AS table_source, "table".frequency AS table_frequency, "table".user AS table_user, "table".department AS table_department, "table".target AS table_target, "table".create_time AS table_create_time, "table".update_time AS table_update_time, "table".size AS table_size, "table".status AS table_status 
+FROM "table"
+2023-05-08 21:16:21,924 INFO sqlalchemy.engine.base.Engine ()
+socketio connected!
+2023-05-08 21:16:50,959 INFO sqlalchemy.engine.base.Engine SELECT "table".id AS table_id, "table".source AS table_source, "table".frequency AS table_frequency, "table".user AS table_user, "table".department AS table_department, "table".target AS table_target, "table".create_time AS table_create_time, "table".update_time AS table_update_time, "table".size AS table_size, "table".status AS table_status 
+FROM "table"
+2023-05-08 21:16:50,960 INFO sqlalchemy.engine.base.Engine ()
